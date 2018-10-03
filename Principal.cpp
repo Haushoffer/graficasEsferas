@@ -11,12 +11,12 @@ int main()
 {
     
     // ESFERA
-    Punto3D centro(0, 0.0, 0.0);
-    double radio = 20;
+    Punto3D centro(-10, 0.0, 2.0);
+    double radio = 40;
     Esfera esfera(centro, radio);  
     esfera.setColor(1.0,0,0); 
     //ESFERA 2
-    Punto3D centro2(20, 0.0, 0.0);
+    Punto3D centro2(0, 0.0, 0.0);
     double radio2 = 20;
     Esfera esfera2(centro2, radio2);
     esfera2.setColor(1.0,0,1.0);
@@ -32,6 +32,8 @@ int main()
     int width = vp.hres;
     int height = vp.vres;
     int n = width * height;
+    double t1 = 2000;
+    double t2= 2000;
     ColorRGB* pixeles = new ColorRGB[n];
     // --------------------------------------------------------------------------------------------------
     for(int fil = 0; fil < vp.vres; fil++)
@@ -46,7 +48,7 @@ int main()
             Punto3D origen(x_o, y_o, z_o);
           
             Rayo rayo(origen, direccion);
-            if (esfera.hayImpacto(rayo))
+            if (esfera.hayImpacto(rayo,t1))
             {
                 // PINTAR DE ROJO
                 pixeles[fil*width+col].r = esfera.obtenerColor().r;
@@ -77,7 +79,7 @@ int main()
             Punto3D origen(x_o, y_o, z_o);
           
             Rayo rayo(origen, direccion);
-            if (esfera2.hayImpacto(rayo))
+            if (esfera2.hayImpacto(rayo,t2))
             {
             // PINTAR DE amarillo
             pixeles[fil*width+col].r = esfera2.obtenerColor().r;

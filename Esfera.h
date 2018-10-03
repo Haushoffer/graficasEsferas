@@ -6,7 +6,7 @@ class Esfera
     public:
     Esfera(Punto3D, double);
     ~Esfera();
-    bool hayImpacto(const Rayo& r) const;
+    bool hayImpacto(const Rayo& r,double& tmin) const;
     ColorRGB obtenerColor();
     void setColor(double r, double g, double b);
 
