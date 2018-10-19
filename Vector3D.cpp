@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 using namespace std;
 #include "Vector3D.h"
 
@@ -57,6 +58,13 @@ Vector3D Vector3D::operator*(const double n) const
 Vector3D Vector3D::operator/ (const double n) const 
 {
     return(Vector3D( x / n, y / n, z / n));
+}
+
+
+Vector3D& Vector3D::hat(void) {
+	double length = sqrt(x * x + y * y + z * z);
+	x /= length; y /= length; z /= length;
+	return (*this);
 }
 
 // Utilitarios --------------------------------------------------------------------------------------------------------

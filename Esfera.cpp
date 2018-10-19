@@ -1,8 +1,8 @@
 #include "Esfera.h"
 #include<iostream>
-#include <cmath>
-
+#include <math.h>
 using namespace std;
+
 Esfera::Esfera(Punto3D v_c, double v_r):c( v_c), r( v_r)
 { 
     color.r = 1.0;
@@ -10,8 +10,9 @@ Esfera::Esfera(Punto3D v_c, double v_r):c( v_c), r( v_r)
     color.b = 0.0;
 }
 Esfera::~Esfera(){}
-bool Esfera::hayImpacto(const Rayo& rayo, double& tmin) const
+bool Esfera::hayImpacto(const Rayo& rayo, double& tmin, Vector3D& n, Punto3D& q) const
 {
+    double t;
     Vector3D temp = rayo.o - c;
     double a = rayo.d * rayo.d;
     double b = 2 * rayo.d * temp;
@@ -20,27 +21,37 @@ bool Esfera::hayImpacto(const Rayo& rayo, double& tmin) const
     if ( discriminante < 0.0 )
     {
         return false;
+        
     } 
     else
     {
-        discriminante = sqrt(discriminante);
-        double t0 = -b-discriminante;
-        if(t0 > 0){
-            tmin = t0;
-            return true;
-        }
-        double t1 = -b+discriminante;
-        if(t1 > 0){
-            tmin = t1;
-            return true;
-        }
-        return false;
+       double disc_eval = sqrt(discriminante);
+       double denominador = 2.0 * a;
+       // smaller root
+       t = (-b - disc_eval)/denominador;
+       if( t > 0.000001 )
+       {
+           q = rayo.o + t * rayo.d; 
+           n = (temp + t * rayo.d) / r;
+           tmin = t;
+           return true;
+       }
+       // larger root
+       t = (-b + disc_eval)/denominador;
+       if( t > 0.000001 )
+       {
+           q = rayo.o + t * rayo.d; 
+           n = (temp + t * rayo.d) / r;
+           tmin = t;
+           return true;
+       }
     }
 }
-void Esfera::setColor(double r, double g, double b){
-    color.r=r;
-    color.g=g;
-    color.b=b;
+void Esfera::establecerColor(double v_r, double v_g, double v_b)
+{
+    color.r = v_r;
+    color.g = v_g;
+    color.b = v_b;
 }
 
 ColorRGB Esfera::obtenerColor()

@@ -18,6 +18,8 @@ class Vector3D
     Vector3D operator* (const double n) const;               // Multiplicar un vector por un escalar
     Vector3D operator/ (const double n) const;               // Dividir por un escalar
     
+    Vector3D& hat();							             // Convertir el vector a un vector unitario y retornar el vector
+
     public:
     double x; // componente x
     double y; // componente y
