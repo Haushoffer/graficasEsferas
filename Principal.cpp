@@ -59,61 +59,81 @@ ColorRGB obtenerColorPixel(const Rayo& r, vector<ObjetoGeometrico*> objetos, Luz
 
 int main()
 {
-    double sm=2         ;
+    double sm=2;
+    double alt=200;
     // LUZ ----------------------------------------------------------------------------------------------
     LuzPuntual luz(1.0, 1.0, 1.0, 200, 400, 300);
     // ESCENA--------------------------------------------------------------------------------------------
     /////OREJAS INICIO
-    Punto3D centro1(16.6*sm, 33.3*sm, -900.0);
+    Punto3D centro1(16.6*sm, (33.3*sm)+alt, -900.0);
     double radio1 = 8.33*sm;
     Esfera esfera1(centro1, radio1);   
     esfera1.establecerColor(0.36, 0.231, 0.17);
 
-    Punto3D centro3(-16.6*sm, 33.3*sm, -900.0);
+    Punto3D centro3(-16.6*sm, (33.3*sm)+alt, -900.0);
     double radio3 = 8.33*sm;
     Esfera esfera3(centro3, radio3);   
     esfera3.establecerColor(0.36, 0.231, 0.17);
     ////OREJAS FIN
     ///OREJAS INTERIOR INICIO
-    Punto3D centro4(15.1*sm, 31.6*sm, -850.0);
+    Punto3D centro4(15.1*sm, (31.6*sm)+alt, -850.0);
     double radio4 = 4.16*sm;
     Esfera esfera4(centro4, radio4);   
     esfera4.establecerColor(1.0, 0.3, 0.3);
 
-    Punto3D centro5(-15.1*sm, 31.6*sm, -850.0);
+    Punto3D centro5(-15.1*sm, (31.6*sm)+alt, -850.0);
     double radio5 = 4.16*sm;
     Esfera esfera5(centro5, radio5);   
     esfera5.establecerColor(1.0, 0.3, 0.3);
     ///OREJAS INTERIOR FIN
 
     ///ojos
-    Punto3D centro6(13.43*sm, 10.0*sm, -400.0);
+    Punto3D centro6(10*sm, (10.0*sm)+alt, -400.0);
     double radio6 = 3*sm;
     Esfera esfera6(centro6, radio6);   
     esfera6.establecerColor(0, 0, 0);
 
-    Punto3D centro7(-13.43*sm, 10.0*sm, -400.0);
+    Punto3D centro7(-10*sm, (10.0*sm)+alt, -400.0);
     double radio7 = 3*sm;
     Esfera esfera7(centro7, radio7);   
     esfera7.establecerColor(0, 0, 0);
 
     //iris
-    Punto3D centro8(13.43*sm, 10.0*sm, 1);
+    Punto3D centro8(10*sm, (10.0*sm)+ alt, 1);
     double radio8 = 1.6*sm;
     Esfera esfera8(centro8, radio8);   
     esfera8.establecerColor(0,1,0);
 
-    Punto3D centro9(-13.43*sm, 10.0*sm, 1);
+    Punto3D centro9(-10*sm, (10.0*sm) + alt, 1);
     double radio9 = 1.6*sm;
     Esfera esfera9(centro9, radio9);   
     esfera9.establecerColor(0,1, 0);
     //iris
     //ojos fin
 
-    Punto3D centro2(0.0, 0.0, -800.0);
+    //boca ini
+    Punto3D centro11(0.0, -20+0.0+alt, -400.0);
+    double radio11 = 10*sm;
+    Esfera esfera11(centro11, radio11);   
+    esfera11.establecerColor(0, 0, 0);
+
+    Punto3D centro12(0.0, -20+0.0+alt, -300.0);
+    double radio12 = 5*sm;
+    Esfera esfera12(centro12, radio12);   
+    esfera12.establecerColor(1, 0, 0);
+
+
+    //boca fin
+
+    Punto3D centro2(0.0, 0.0+alt, -800.0);
     double radio2 = 33.3*sm;
     Esfera esfera2(centro2, radio2);   
     esfera2.establecerColor(0.36, 0.231, 0.17);
+
+    Punto3D centro10(0.0, -80-(sm*33.3)+alt, -900.0);
+    double radio10 = 60*sm;
+    Esfera esfera10(centro10, radio10);   
+    esfera10.establecerColor(0.36, 0.231, 0.17);
 
     vector<ObjetoGeometrico*> escena;
     ///cara
@@ -133,6 +153,13 @@ int main()
     escena.push_back(&esfera9);
     //fin iris
     ///fin ojos
+
+    //curpito
+    escena.push_back(&esfera10);
+
+    //boca
+    escena.push_back(&esfera11);
+    escena.push_back(&esfera12);
     ColorRGB color_pixel;
     
 
