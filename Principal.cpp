@@ -9,6 +9,7 @@ using namespace std;
 #include "Rayo.h"
 #include "LuzPuntual.h"
 #include "Utilitarios.h"
+#include "Plano.h"
 
 double acotar(double n)
 {
@@ -62,7 +63,8 @@ int main()
     double sm=2;
     double alt=200;
     // LUZ ----------------------------------------------------------------------------------------------
-    LuzPuntual luz(1.0, 1.0, 1.0, 200, 400, 300);
+    //LuzPuntual luz(1.0, 1.0, 1.0, -200, -400, -300);
+    LuzPuntual luz(1.0, 1.0, 1.0, 0.0, 200, 0.0);
     // ESCENA--------------------------------------------------------------------------------------------
     /////OREJAS INICIO
     Punto3D centro1(16.6*sm, (33.3*sm)+alt, -900.0);
@@ -134,6 +136,18 @@ int main()
     double radio10 = 60*sm;
     Esfera esfera10(centro10, radio10);   
     esfera10.establecerColor(0.36, 0.231, 0.17);
+    
+    //Plano
+    Punto3D p(0, 0.0, -10000.0);
+    Vector3D q(0, 1.0, 1.0);
+    Plano plano(p, q.hat());
+    plano.establecerColor(1.0, 1.0, 0.0);
+    
+    //fin plano
+    /*Punto3D a(0, 150, 0);
+    Vector3D b(0, 1.0, 1.0);
+    Plano plano1(a, b.hat());
+    plano1.establecerColor(0.0, 0.0, 246.0);*/
 
     vector<ObjetoGeometrico*> escena;
     ///cara
@@ -160,8 +174,11 @@ int main()
     //boca
     escena.push_back(&esfera11);
     escena.push_back(&esfera12);
+   
     ColorRGB color_pixel;
-    
+    //plano
+    escena.push_back(&plano);
+   //escena.push_back(&plano1);
 
     // VIEWPLANE----------------------------------------------------------------------------------------
     int hres = 800;

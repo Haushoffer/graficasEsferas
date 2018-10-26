@@ -63,7 +63,9 @@ Vector3D Vector3D::operator/ (const double n) const
 
 Vector3D& Vector3D::hat(void) {
 	double length = sqrt(x * x + y * y + z * z);
-	x /= length; y /= length; z /= length;
+	x /= length;
+    y /= length;
+    z /= length;
 	return (*this);
 }
 
