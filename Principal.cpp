@@ -141,7 +141,7 @@ int main()
     Punto3D p(0, 0.0, -10000.0);
     Vector3D q(0, 1.0, 1.0);
     Plano plano(p, q.hat());
-    plano.establecerColor(1.0, 1.0, 0.0);
+    plano.establecerColor(0.02, 0.04, 0.2);
     
     //fin plano
     /*Punto3D a(0, 150, 0);
