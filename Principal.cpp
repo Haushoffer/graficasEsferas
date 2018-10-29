@@ -268,6 +268,16 @@ int main()
     Esfera esfera24(centro24, radio24);   
     esfera24.establecerColor(0.36, 0.231, 0.10);
 
+   /* Punto3D centro37(60*sm, (-160*sm)+alt, 110.0);
+    double radio37 = 10.33*sm;
+    Esfera esfera37(centro37, radio37);   
+    esfera37.establecerColor(0.36, 0.231, 0.10);
+    
+    Punto3D centro38(-60*sm, (-160*sm)+alt, 110.0);
+    double radio38 = 10.33*sm;
+    Esfera esfera38(centro38, radio38);   
+    esfera38.establecerColor(0.36, 0.231, 0.10);*/
+
     //fin pies
     //esfera focos fin
     //Pared
@@ -387,6 +397,7 @@ int main()
     //piernas
     escena.push_back(&esfera23);
     escena.push_back(&esfera24);
+
     //pared
     escena.push_back(&plano1);
 
@@ -401,6 +412,8 @@ int main()
     escena.push_back(&plano8);
     escena.push_back(&plano9);
     escena.push_back(&plano10);
+    //escena.push_back(&esfera37);
+   // escena.push_back(&esfera38);
     ColorRGB color_pixel;
    
   
