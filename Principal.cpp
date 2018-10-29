@@ -176,6 +176,31 @@ int main()
     double radio20 = 4.33*sm;
     Esfera esfera20(centro20, radio20);   
     esfera20.establecerColor(0.65, 0.07, 0.82);
+
+    //manos
+    Punto3D centro21(-75*sm, (-70*sm)+alt, -500.0);
+    double radio21 = 15.33*sm;
+    Esfera esfera21(centro21, radio21);   
+    esfera21.establecerColor(0.36, 0.231, 0.17);
+
+    Punto3D centro22(75*sm, (-70*sm)+alt, -500.0);
+    double radio22 = 15.33*sm;
+    Esfera esfera22(centro22, radio22);   
+    esfera22.establecerColor(0.36, 0.231, 0.17);
+     //fin manos
+
+    //pies
+    Punto3D centro23(50*sm, (-135*sm)+alt, 5.0);
+    double radio23 = 20.33*sm;
+    Esfera esfera23(centro23, radio23);   
+    esfera23.establecerColor(0.36, 0.231, 0.17);
+
+    Punto3D centro24(-50*sm, (-135*sm)+alt, 5.0);
+    double radio24 = 20.33*sm;
+    Esfera esfera24(centro24, radio24);   
+    esfera24.establecerColor(0.36, 0.231, 0.17);
+
+    //fin pies
     //esfera focos fin
     //Pared
     Punto3D p1(0, 0.0, -1000.0);
@@ -274,6 +299,14 @@ int main()
    escena.push_back(&esfera18);
    escena.push_back(&esfera19);
    escena.push_back(&esfera20);
+
+   //manos
+    escena.push_back(&esfera21);
+    escena.push_back(&esfera22);
+
+    //piernas
+    escena.push_back(&esfera23);
+    escena.push_back(&esfera24);
     //pared
     escena.push_back(&plano1);
 
