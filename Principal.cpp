@@ -135,7 +135,7 @@ int main()
     Punto3D centro10(0.0, -80-(sm*33.3)+alt, -900.0);
     double radio10 = 60*sm;
     Esfera esfera10(centro10, radio10);   
-    esfera10.establecerColor(0.36, 0.231, 0.17);
+    esfera10.establecerColor(0.36, 0.231, 0.10);
     //esfera focos
     Punto3D centro13(100*sm, (33.3*sm)+alt, -900.0);
     double radio13 = 15.33*sm;
@@ -178,27 +178,69 @@ int main()
     esfera20.establecerColor(0.65, 0.07, 0.82);
 
     //manos
-    Punto3D centro21(-75*sm, (-70*sm)+alt, -500.0);
+    Punto3D centro21(-70*sm, (-50*sm)+alt, -500.0);
     double radio21 = 15.33*sm;
     Esfera esfera21(centro21, radio21);   
-    esfera21.establecerColor(0.36, 0.231, 0.17);
+    esfera21.establecerColor(0.36, 0.231, 0.10);
 
-    Punto3D centro22(75*sm, (-70*sm)+alt, -500.0);
+    Punto3D centro22(70*sm, (-50*sm)+alt, -500.0);
     double radio22 = 15.33*sm;
     Esfera esfera22(centro22, radio22);   
-    esfera22.establecerColor(0.36, 0.231, 0.17);
+    esfera22.establecerColor(0.36, 0.231, 0.10);
      //fin manos
 
+
+     //dedos izq
+    
+     //fin dedos izq
+
+
+     //dedos der
+
+    
+    //fondo palma der
+    Punto3D centro30(70*sm, (-52*sm)+alt, -400);
+    double radio30 = 7.99*sm;
+    Esfera esfera30(centro30, radio30);   
+    esfera30.establecerColor(0, 0, 0);
+    // fin fondo palma der
+    Punto3D centro25(70*sm, (-52*sm)+alt, -300);
+    double radio25 = 8*sm;
+    Esfera esfera25(centro25, radio25);   
+    esfera25.establecerColor(1.0, 0.3, 0.3);
+    
+    Punto3D centro26(60*sm, (-45*sm)+alt, -300);
+    double radio26 = 2*sm;
+    Esfera esfera26(centro26, radio26);   
+    esfera26.establecerColor(1.0, 0.3, 0.3);
+
+    Punto3D centro27(80*sm, (-45*sm)+alt, -300);
+    double radio27 = 2*sm;
+    Esfera esfera27(centro27, radio27);   
+    esfera27.establecerColor(1.0, 0.3, 0.3);
+
+    Punto3D centro28(74*sm, (-40*sm)+alt, -300);
+    double radio28 = 2*sm;
+    Esfera esfera28(centro28, radio28);   
+    esfera28.establecerColor(1.0, 0.3, 0.3);
+
+    Punto3D centro29(66*sm, (-40*sm)+alt, -300);
+    double radio29 = 2*sm;
+    Esfera esfera29(centro29, radio29);   
+    esfera29.establecerColor(1.0, 0.3, 0.3);
+    
+     //fin dedos der
+
     //pies
-    Punto3D centro23(50*sm, (-135*sm)+alt, 5.0);
+    Punto3D centro23(50*sm, (-135*sm)+alt, -300);
     double radio23 = 20.33*sm;
     Esfera esfera23(centro23, radio23);   
-    esfera23.establecerColor(0.36, 0.231, 0.17);
+    esfera23.establecerColor(0.36, 0.231, 0.10);
 
-    Punto3D centro24(-50*sm, (-135*sm)+alt, 5.0);
+    Punto3D centro24(-50*sm, (-135*sm)+alt, -300);
     double radio24 = 20.33*sm;
     Esfera esfera24(centro24, radio24);   
-    esfera24.establecerColor(0.36, 0.231, 0.17);
+    esfera24.establecerColor(0.36, 0.231, 0.10);
 
     //fin pies
     //esfera focos fin
@@ -209,7 +251,7 @@ int main()
     plano1.establecerColor(0.02, 0.04, 0.2);
     //fin Pared
     //inicio piso
-    Punto3D p2(0,-200,0);
+    Punto3D p2(0,-220,0);
     Vector3D q2(0, 1.0,-1.0 );
     Plano plano2(p2, q2.hat());
     plano2.establecerColor(0.20, 0.29, 0.37);
@@ -259,10 +301,6 @@ int main()
 
     //fin piso
 
-    /*Punto3D a(0, 150, 0);
-    Vector3D b(0, 1.0, 1.0);
-    Plano plano1(a, b.hat());
-    plano1.establecerColor(0.0, 0.0, 246.0);*/
 
     vector<ObjetoGeometrico*> escena;
     ///cara
@@ -303,6 +341,16 @@ int main()
    //manos
     escena.push_back(&esfera21);
     escena.push_back(&esfera22);
+
+    //dedos der
+    escena.push_back(&esfera25);
+    escena.push_back(&esfera26);
+    escena.push_back(&esfera27);
+    escena.push_back(&esfera28);
+    escena.push_back(&esfera29);
+    escena.push_back(&esfera30);
+    
+
 
     //piernas
     escena.push_back(&esfera23);
