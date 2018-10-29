@@ -136,14 +136,104 @@ int main()
     double radio10 = 60*sm;
     Esfera esfera10(centro10, radio10);   
     esfera10.establecerColor(0.36, 0.231, 0.17);
-    
-    //Plano
-    Punto3D p(0, 0.0, -10000.0);
-    Vector3D q(0, 1.0, 1.0);
-    Plano plano(p, q.hat());
-    plano.establecerColor(0.02, 0.04, 0.2);
-    
-    //fin plano
+    //esfera focos
+    Punto3D centro13(100*sm, (33.3*sm)+alt, -900.0);
+    double radio13 = 15.33*sm;
+    Esfera esfera13(centro13, radio13);   
+    esfera13.establecerColor(0, 0, 0);
+
+    Punto3D centro14(-100*sm, (33.3*sm)+alt, -900.0);
+    double radio14 = 15.33*sm;
+    Esfera esfera14(centro14, radio14);   
+    esfera14.establecerColor(0, 0, 0);
+
+    Punto3D centro15(100*sm, (33.3*sm)+alt, -850.0);
+    double radio15 = 4.33*sm;
+    Esfera esfera15(centro15, radio15);   
+    esfera15.establecerColor(0.29, 0.99, 0.11);
+
+    Punto3D centro16(-100*sm, (33.3*sm)+alt, -850.0);
+    double radio16 = 4.33*sm;
+    Esfera esfera16(centro16, radio16);   
+    esfera16.establecerColor(0.29, 0.99, 0.11);
+
+    Punto3D centro17(180*sm, (33.3*sm)+alt, -900.0);
+    double radio17 = 15.33*sm;
+    Esfera esfera17(centro17, radio17);   
+    esfera17.establecerColor(0, 0, 0);
+
+    Punto3D centro18(-180*sm, (33.3*sm)+alt, -900.0);
+    double radio18 = 15.33*sm;
+    Esfera esfera18(centro18, radio18);   
+    esfera18.establecerColor(0, 0, 0);
+
+    Punto3D centro19(180*sm, (33.3*sm)+alt, -850.0);
+    double radio19 = 4.33*sm;
+    Esfera esfera19(centro19, radio19);   
+    esfera19.establecerColor(0.65, 0.07, 0.82);
+
+    Punto3D centro20(-180*sm, (33.3*sm)+alt, -850.0);
+    double radio20 = 4.33*sm;
+    Esfera esfera20(centro20, radio20);   
+    esfera20.establecerColor(0.65, 0.07, 0.82);
+    //esfera focos fin
+    //Pared
+    Punto3D p1(0, 0.0, -1000.0);
+    Vector3D q1(0, 1.0, 1.0);
+    Plano plano1(p1, q1.hat());
+    plano1.establecerColor(0.02, 0.04, 0.2);
+    //fin Pared
+    //inicio piso
+    Punto3D p2(0,-200,0);
+    Vector3D q2(0, 1.0,-1.0 );
+    Plano plano2(p2, q2.hat());
+    plano2.establecerColor(0.20, 0.29, 0.37);
+
+    Punto3D p3(0,-240,0);
+    Vector3D q3(0, 1.0,-1.0 );
+    Plano plano3(p3, q3.hat());
+    plano3.establecerColor(0.65, 0.07, 0.82);
+
+    Punto3D p4(0,-245,0);
+    Vector3D q4(0, 1.0,-1.0 );
+    Plano plano4(p4, q4.hat());
+    plano4.establecerColor(0.20, 0.29, 0.37);
+
+    Punto3D p5(0,-285,0);
+    Vector3D q5(0, 1.0,-1.0 );
+    Plano plano5(p5, q5.hat());
+    plano5.establecerColor(0.29, 0.99, 0.11);
+
+    Punto3D p6(0,-290,0);
+    Vector3D q6(0, 1.0,-1.0 );
+    Plano plano6(p6, q6.hat());
+    plano6.establecerColor(0.20, 0.29, 0.37);
+
+    Punto3D p7(0,-330,0);
+    Vector3D q7(0, 1.0,-1.0 );
+    Plano plano7(p7, q7.hat());
+    plano7.establecerColor(0.29, 0.99, 0.11);
+
+    Punto3D p8(0,-335,0);
+    Vector3D q8(0, 1.0,-1.0 );
+    Plano plano8(p8, q8.hat());
+    plano8.establecerColor(0.20, 0.29, 0.37);
+
+    Punto3D p9(0,-375,0);
+    Vector3D q9(0, 1.0,-1.0 );
+    Plano plano9(p9, q9.hat());
+    plano9.establecerColor(0.65, 0.07, 0.82);
+
+    Punto3D p10(0,-380,0);
+    Vector3D q10(0, 1.0,-1.0 );
+    Plano plano10(p10, q10.hat());
+    plano10.establecerColor(0.20, 0.29, 0.37);
+
+   
+
+
+    //fin piso
+
     /*Punto3D a(0, 150, 0);
     Vector3D b(0, 1.0, 1.0);
     Plano plano1(a, b.hat());
@@ -175,10 +265,32 @@ int main()
     escena.push_back(&esfera11);
     escena.push_back(&esfera12);
    
+   //focos
+   escena.push_back(&esfera13);
+   escena.push_back(&esfera14);
+   escena.push_back(&esfera15);
+   escena.push_back(&esfera16);
+   escena.push_back(&esfera17);
+   escena.push_back(&esfera18);
+   escena.push_back(&esfera19);
+   escena.push_back(&esfera20);
+    //pared
+    escena.push_back(&plano1);
+
+    //piso
+     //plano
+    escena.push_back(&plano2);
+    escena.push_back(&plano3);
+    escena.push_back(&plano4);
+    escena.push_back(&plano5);
+    escena.push_back(&plano6);
+    escena.push_back(&plano7);
+    escena.push_back(&plano8);
+    escena.push_back(&plano9);
+    escena.push_back(&plano10);
     ColorRGB color_pixel;
-    //plano
-    escena.push_back(&plano);
-   //escena.push_back(&plano1);
+   
+  
 
     // VIEWPLANE----------------------------------------------------------------------------------------
     int hres = 800;
