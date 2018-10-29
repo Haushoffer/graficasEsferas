@@ -187,17 +187,44 @@ int main()
     double radio22 = 15.33*sm;
     Esfera esfera22(centro22, radio22);   
     esfera22.establecerColor(0.36, 0.231, 0.10);
-     //fin manos
+    //fin manos
 
 
-     //dedos izq
+    //dedos izq
+    //fondo palma izq
+    Punto3D centro31(-70*sm, (-52*sm)+alt, -400);
+    double radio31 = 7.99*sm;
+    Esfera esfera31(centro31, radio31);   
+    esfera31.establecerColor(0, 0, 0);
+    // fin fondo palma izq
+    Punto3D centro32(-70*sm, (-52*sm)+alt, -300);
+    double radio32 = 8*sm;
+    Esfera esfera32(centro32, radio32);   
+    esfera32.establecerColor(1.0, 0.3, 0.3);
     
-     //fin dedos izq
+    Punto3D centro33(-60*sm, (-45*sm)+alt, -300);
+    double radio33 = 2*sm;
+    Esfera esfera33(centro33, radio33);   
+    esfera33.establecerColor(1.0, 0.3, 0.3);
+
+    Punto3D centro34(-80*sm, (-45*sm)+alt, -300);
+    double radio34 = 2*sm;
+    Esfera esfera34(centro34, radio34);   
+    esfera34.establecerColor(1.0, 0.3, 0.3);
+
+    Punto3D centro35(-74*sm, (-40*sm)+alt, -300);
+    double radio35 = 2*sm;
+    Esfera esfera35(centro35, radio35);   
+    esfera35.establecerColor(1.0, 0.3, 0.3);
+
+    Punto3D centro36(-66*sm, (-40*sm)+alt, -300);
+    double radio36 = 2*sm;
+    Esfera esfera36(centro36, radio36);   
+    esfera36.establecerColor(1.0, 0.3, 0.3);
+    //fin dedos izq
 
 
-     //dedos der
-
-    
+    //dedos der
     //fondo palma der
     Punto3D centro30(70*sm, (-52*sm)+alt, -400);
     double radio30 = 7.99*sm;
@@ -228,8 +255,7 @@ int main()
     double radio29 = 2*sm;
     Esfera esfera29(centro29, radio29);   
     esfera29.establecerColor(1.0, 0.3, 0.3);
-    
-     //fin dedos der
+    //fin dedos der
 
     //pies
     Punto3D centro23(50*sm, (-135*sm)+alt, -300);
@@ -350,8 +376,14 @@ int main()
     escena.push_back(&esfera29);
     escena.push_back(&esfera30);
     
-
-
+    //dedos izq
+    escena.push_back(&esfera36);
+    escena.push_back(&esfera31);
+    escena.push_back(&esfera32);
+    escena.push_back(&esfera33);
+    escena.push_back(&esfera34);
+    escena.push_back(&esfera35);
+    
     //piernas
     escena.push_back(&esfera23);
     escena.push_back(&esfera24);
