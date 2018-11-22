@@ -334,13 +334,30 @@ int main()
     plano10.establecerColor(0.20, 0.29, 0.37);
 
     //Triangulo
-    Punto3D A(50,250,50);
-    Punto3D B(0,300,5);
-    Punto3D C(-50, 250, 20);
+    Punto3D A(50,250,-50);
+    Punto3D B(0,300,45);
+    Punto3D C(-50, 250, -20);
     Triangulo t(A, B, C);
-    t.establecerColor(1.0,0,0);
-   
+    t.establecerColor(0.113,0.647,0.529);
 
+    //Calzon
+    Punto3D A1(110,10,50);
+    Punto3D B1(0,-65,-45);
+    Punto3D C1(-110, 10, 20);   
+    Triangulo t2(A1,B1,C1);
+    t2.establecerColor(0.749,0.882,0.20);
+
+    //Esferas calzon
+    
+    Punto3D centro37(20*sm, (-100*sm)+alt, 55);
+    double radio37 = 3*sm;
+    Esfera esfera37(centro37, radio37);   
+    esfera37.establecerColor(1.0, 0, 0);
+
+    Punto3D centro38(-20*sm, (-110*sm)+alt, 60);
+    double radio38 = 3*sm;
+    Esfera esfera38(centro38, radio38);   
+    esfera38.establecerColor(1.0, 0, 0);
 
     //fin piso
 
@@ -424,7 +441,17 @@ int main()
    // escena.push_back(&esfera38);
    //triangulo
    escena.push_back(&t);
+
+   //calzon
+   escena.push_back(&t2);
+
+   //esferas calzon
+    escena.push_back(&esfera37);
+    escena.push_back(&esfera38);
+
     ColorRGB color_pixel;
+
+
    
   
 
