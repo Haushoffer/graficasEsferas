@@ -349,15 +349,56 @@ int main()
 
     //Esferas calzon
     
-    Punto3D centro37(20*sm, (-100*sm)+alt, 55);
+    Punto3D centro37(18*sm, (-100*sm)+alt, 55);
     double radio37 = 3*sm;
     Esfera esfera37(centro37, radio37);   
     esfera37.establecerColor(1.0, 0, 0);
 
-    Punto3D centro38(-20*sm, (-110*sm)+alt, 60);
-    double radio38 = 3*sm;
-    Esfera esfera38(centro38, radio38);   
+    Punto3D centro38(-22*sm, (-110*sm)+alt, 60);
+    Esfera esfera38(centro38, radio37);   
     esfera38.establecerColor(1.0, 0, 0);
+    
+    Punto3D centro40(28*sm, (-110*sm)+alt, 60);
+    Esfera esfera40(centro40, radio37);   
+    esfera40.establecerColor(1.0, 0, 0);
+    
+
+    Punto3D centro39(0*sm, (-113*sm)+alt, 60);
+    Esfera esfera39(centro39, radio37);   
+    esfera39.establecerColor(1.0, 0, 0);
+
+    Punto3D centro42(-5*sm, (-125*sm)+alt, 60);
+    Esfera esfera42(centro42, radio37);   
+    esfera39.establecerColor(1.0, 0, 0);
+
+
+    Punto3D centro41(-14*sm, (-100*sm)+alt, 60);
+    Esfera esfera41(centro41, radio37);   
+    esfera41.establecerColor(1.0, 0, 0);
+
+    Punto3D centro44(-50*sm, (-100*sm)+alt, 60);
+    Esfera esfera44(centro44, radio37);   
+    esfera44.establecerColor(1.0, 0, 0);
+    Punto3D centro43(50*sm, (-100*sm)+alt, 60);
+    Esfera esfera43(centro43, radio37);   
+    esfera43.establecerColor(1.0, 0, 0);
+
+    Punto3D centro45(-30*sm, (-102*sm)+alt, 60);
+    Esfera esfera45(centro45, radio37);   
+    esfera45.establecerColor(1.0, 0, 0);
+    Punto3D centro46(30*sm, (-102*sm)+alt, 60);
+    Esfera esfera46(centro46, radio37);   
+    esfera46.establecerColor(1.0, 0, 0);
+
+
+    Punto3D centro47(0*sm, (-103*sm)+alt, 60);
+    Esfera esfera47(centro47, radio37);   
+    esfera47.establecerColor(1.0, 0, 0);
+
+
+    Punto3D centro48(10*sm, (-113*sm)+alt, 60);
+    Esfera esfera48(centro48, radio37);   
+    esfera48.establecerColor(1.0, 0, 0);
 
     //fin piso
 
@@ -448,6 +489,16 @@ int main()
    //esferas calzon
     escena.push_back(&esfera37);
     escena.push_back(&esfera38);
+    escena.push_back(&esfera39);
+    escena.push_back(&esfera40);
+    escena.push_back(&esfera41);
+    escena.push_back(&esfera42);
+    escena.push_back(&esfera44);
+    escena.push_back(&esfera43);
+    escena.push_back(&esfera45);
+    escena.push_back(&esfera46);
+    escena.push_back(&esfera47);
+    escena.push_back(&esfera48);
 
     ColorRGB color_pixel;
 
@@ -484,6 +535,7 @@ int main()
             Rayo rayo(origen, direccion);
 
             color_pixel = obtenerColorPixel(rayo, escena, luz);
+
 
             pixeles[fil*width+col].r = color_pixel.r;
             pixeles[fil*width+col].g = color_pixel.g;
