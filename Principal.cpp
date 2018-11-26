@@ -347,6 +347,19 @@ int main()
     Triangulo t2(A1,B1,C1);
     t2.establecerColor(0.749,0.882,0.20);
 
+    //Bra
+    Punto3D A2(105,100,-50);
+    Punto3D B2(110,90,45);
+    Punto3D C2(-110, 100, -20);   
+    Triangulo t3(A2,B2,C2);
+    t3.establecerColor(0.749,0.882,0.20);
+
+    Punto3D A3(105,90,-50);
+    Punto3D B3(-112,90,45);
+    Punto3D C3(-110, 100, -20);   
+    Triangulo t4(A3,B3,C3);
+    t4.establecerColor(0.749,0.882,0.20);
+
     //Esferas calzon
     
     Punto3D centro37(18*sm, (-100*sm)+alt, 55);
@@ -486,6 +499,10 @@ int main()
    //calzon
    escena.push_back(&t2);
 
+   //bra
+   escena.push_back(&t3);
+   escena.push_back(&t4);
+
    //esferas calzon
     escena.push_back(&esfera37);
     escena.push_back(&esfera38);
@@ -503,8 +520,6 @@ int main()
     ColorRGB color_pixel;
 
 
-   
-  
 
     // VIEWPLANE----------------------------------------------------------------------------------------
     int hres = 800;
