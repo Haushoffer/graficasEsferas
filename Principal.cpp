@@ -398,7 +398,43 @@ int main()
     t10.establecerColor(1.0,1.0,0);
 
 
+///////ESFERAS DISCO DERECHA
+//A
+    Punto3D A4D(180,190,21);
+    Punto3D B4D(200,230,6);
+    Punto3D C4D(220, 190,-78);   
+    Triangulo t5D(A4D,B4D,C4D);
+    t5D.establecerColor(1.0,1.0,0);
+//I
+    Punto3D A5D(180,190,21);
+    Punto3D B5D(140,170,6);
+    Punto3D C5D(180, 150, -78);   
+    Triangulo t6D(A5D,B5D,C5D);
+    t6D.establecerColor(1.0,1.0,0);
+//AB
+    Punto3D A6D(220,150,21);
+    Punto3D B6D(180,150,6);
+    Punto3D C6D(200, 110, -78);   
+    Triangulo t7D(A6D,B6D,C6D);
+    t7D.establecerColor(1.0,1.0,0);
+//DER
+    Punto3D A7D(220,190,20);
+    Punto3D B7D(260,170,6);
+    Punto3D C7D(220, 150, 20);   
+    Triangulo t8D(A7D,B7D,C7D);
+    t8D.establecerColor(1.0,1.0,0);
+//CENTRO ARR
+    Punto3D A8D(180,190,21);
+    Punto3D B8D(220,190,6);
+    Punto3D C8D(180, 150, 78);   
+    Triangulo t9D(A8D,B8D,C8D);
+    t9D.establecerColor(1.0,1.0,0);
 
+    Punto3D A9D(180,150,24);
+    Punto3D B9D(220,190,8);
+    Punto3D C9D(220, 150, -78);   
+    Triangulo t10D(A9D,B9D,C9D);
+    t10D.establecerColor(1.0,1.0,0);
 
     //Esferas calzon
     
@@ -544,12 +580,20 @@ int main()
    escena.push_back(&t4);
 
    //estrellas
+   
+    escena.push_back(&t5D);
+    escena.push_back(&t6D);
+    escena.push_back(&t7D);
+    escena.push_back(&t8D);
+    escena.push_back(&t9D);
+    escena.push_back(&t10D);
     escena.push_back(&t5);
     escena.push_back(&t6);
     escena.push_back(&t7);
     escena.push_back(&t8);
     escena.push_back(&t9);
     escena.push_back(&t10);
+
 
    //esferas calzon
     escena.push_back(&esfera37);
