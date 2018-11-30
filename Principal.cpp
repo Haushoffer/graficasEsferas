@@ -360,6 +360,46 @@ int main()
     Triangulo t4(A3,B3,C3);
     t4.establecerColor(0.749,0.882,0.20);
 
+    //Estrellas de disco
+    Punto3D A4(-180,190,-50);
+    Punto3D B4(-200,230,45);
+    Punto3D C4(-220, 190, -20);   
+    Triangulo t5(A4,B4,C4);
+    t5.establecerColor(1.0,1.0,0);
+
+    Punto3D A5(-180,190,-50);
+    Punto3D B5(-140,170,45);
+    Punto3D C5(-180, 150, -20);   
+    Triangulo t6(A5,B5,C5);
+    t6.establecerColor(1.0,1.0,0);
+
+    Punto3D A6(-220,150,-50);
+    Punto3D B6(-180,150,45);
+    Punto3D C6(-200, 110, -20);   
+    Triangulo t7(A6,B6,C6);
+    t7.establecerColor(1.0,1.0,0);
+
+    Punto3D A7(-220,190,-50);
+    Punto3D B7(-260,170,45);
+    Punto3D C7(-220, 150, -20);   
+    Triangulo t8(A7,B7,C7);
+    t8.establecerColor(1.0,1.0,0);
+
+    Punto3D A8(-180,190,-50);
+    Punto3D B8(-220,190,45);
+    Punto3D C8(-180, 150, -20);   
+    Triangulo t9(A8,B8,C8);
+    t9.establecerColor(1.0,1.0,0);
+
+    Punto3D A9(-180,150,-50);
+    Punto3D B9(-220,190,45);
+    Punto3D C9(-220, 150, -20);   
+    Triangulo t10(A9,B9,C9);
+    t10.establecerColor(1.0,1.0,0);
+
+
+
+
     //Esferas calzon
     
     Punto3D centro37(18*sm, (-100*sm)+alt, 55);
@@ -502,6 +542,14 @@ int main()
    //bra
    escena.push_back(&t3);
    escena.push_back(&t4);
+
+   //estrellas
+    escena.push_back(&t5);
+    escena.push_back(&t6);
+    escena.push_back(&t7);
+    escena.push_back(&t8);
+    escena.push_back(&t9);
+    escena.push_back(&t10);
 
    //esferas calzon
     escena.push_back(&esfera37);
