@@ -62,3 +62,12 @@ ColorRGB Esfera::obtenerColor()
     c.b = color.b;
     return  c;
 }
+
+double* Sphere::getTexture(ImageTexture img)
+{
+
+    color.r=img.get_color.r;
+    color.g=img.get_color.g;
+    color.b=img.get_color.b;
+
+}
