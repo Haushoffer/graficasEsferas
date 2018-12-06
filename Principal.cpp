@@ -137,16 +137,16 @@ int main()
     double radio10 = 60*sm;
     Esfera esfera10(centro10, radio10);   
     esfera10.establecerColor(0.36, 0.231, 0.10);
-    //esfera focos
+    //esfera focos/*////13 14 17 18
     Punto3D centro13(100*sm, (33.3*sm)+alt, -900.0);
     double radio13 = 15.33*sm;
     Esfera esfera13(centro13, radio13);   
-    esfera13.establecerColor(0, 0, 0);
+    esfera13.setTexture();
 
     Punto3D centro14(-100*sm, (33.3*sm)+alt, -900.0);
     double radio14 = 15.33*sm;
     Esfera esfera14(centro14, radio14);   
-    esfera14.establecerColor(0, 0, 0);
+    esfera14.setTexture();
 
     Punto3D centro15(100*sm, (33.3*sm)+alt, -850.0);
     double radio15 = 4.33*sm;
@@ -161,12 +161,12 @@ int main()
     Punto3D centro17(180*sm, (33.3*sm)+alt, -900.0);
     double radio17 = 15.33*sm;
     Esfera esfera17(centro17, radio17);   
-    esfera17.establecerColor(0, 0, 0);
+    esfera17.setTexture();
 
     Punto3D centro18(-180*sm, (33.3*sm)+alt, -900.0);
     double radio18 = 15.33*sm;
     Esfera esfera18(centro18, radio18);   
-    esfera18.establecerColor(0, 0, 0);
+    esfera18.setTexture();
 
     Punto3D centro19(180*sm, (33.3*sm)+alt, -850.0);
     double radio19 = 4.33*sm;
