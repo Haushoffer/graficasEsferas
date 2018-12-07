@@ -135,8 +135,7 @@ Image::read_ppm_file(const char* file_name) {
 
 
 
-ColorRGB									
-Image::get_color(int& index){
+ColorRGB Image::get_color(int& index){
 	int pixels_size = pixels.size();
 	ColorRGB red;
 	red.r=1;red.g=0;red.b=0;

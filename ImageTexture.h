@@ -11,13 +11,7 @@ class ImageTexture {
 		ImageTexture(void);									
 			
 		ImageTexture(Image* _image_ptr);					
-				
-		ImageTexture(const ImageTexture& it);				
-
-		ImageTexture& 										
-		operator= (const ImageTexture& rhs);		
-			
-
+	
 		virtual
 		~ImageTexture(void) ;								
 		
@@ -36,14 +30,4 @@ class ImageTexture {
 		int			vres;		
 		Image*		image_ptr;		
 };
-
-
-
-inline void
-ImageTexture::set_image(Image* _image_ptr) {
-	image_ptr = _image_ptr;
-	hres = image_ptr->get_hres();
-	vres = image_ptr->get_vres();
-}
-
 

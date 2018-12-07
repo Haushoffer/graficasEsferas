@@ -18,16 +18,6 @@ ImageTexture::ImageTexture(Image* _image_ptr)
 	index=0;
 }
 
-ImageTexture& 
-ImageTexture::operator= (const ImageTexture& rhs) {
-	hres = rhs.hres;
-	vres = rhs.vres;
-	std::cout<<"Pasa h y v\n";
-	image_ptr=rhs.image_ptr;
-	std::cout<<"Pasa igual: "<< image_ptr <<" y "<<rhs.image_ptr<<"\n";
-	
-	
-}
 
 ImageTexture::~ImageTexture(){
 	

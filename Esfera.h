@@ -14,9 +14,11 @@ class Esfera : public ObjetoGeometrico
     void establecerColor(double, double, double);
     ColorRGB obtenerColor();
     double* getTexture(ImageTexture img);
+    bool tieneTextura();
+    void setTexture(ImageTexture img);
 
     Punto3D c;
+    bool esTexturizado;
     double r;
-    vector<Vector3D> axiss;
     ColorRGB color;
 };
