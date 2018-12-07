@@ -338,11 +338,7 @@ double sm=2;
     plano10.establecerColor(0.20, 0.29, 0.37);
 
     //Triangulo
-    Punto3D A(50,250,-50);
-    Punto3D B(0,300,45);
-    Punto3D C(-50, 250, -20);
-    Triangulo t(A, B, C);
-    t.establecerColor(0.113,0.647,0.529);
+
 
     //Calzon
     Punto3D A1(110,10,50);
@@ -574,7 +570,7 @@ double sm=2;
     //escena.push_back(&esfera37);
    // escena.push_back(&esfera38);
    //triangulo
-   escena.push_back(&t);
+
 
    //calzon
    escena.push_back(&t2);
