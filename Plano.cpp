@@ -3,6 +3,10 @@ Plano::Plano(Punto3D v_p, Vector3D v_n)
 {
     p = v_p;
     n = v_n;
+    color.r = 1.0;
+    color.g = 1.0;
+    color.b = 0.0;
+    esTexturizado=false;
 }
 bool Plano::hayImpacto(const Rayo& _rayo, double& _t, Vector3D& _n, Punto3D& _q  ) const
 {
@@ -29,8 +33,27 @@ void Plano::establecerColor(double v_r, double v_g, double v_b)
 ColorRGB Plano::obtenerColor()
 {
     ColorRGB c;
+    if(esTexturizado){
+     c=textura.get_color();
+    }
+    else{
     c.r = color.r;
     c.g = color.g;
     c.b = color.b;
+    }
     return  c;
+}
+
+void Plano::setTexture(ImageTexture img)
+{
+    textura=img;
+    esTexturizado=true;
+    ColorRGB x = img.get_color();
+    color.r=x.r;
+    color.g=x.g;
+    color.b=x.b;
+}
+bool Plano::tieneTextura()
+{
+    return esTexturizado;
 }

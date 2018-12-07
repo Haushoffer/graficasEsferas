@@ -63,6 +63,10 @@ int main()
     Image disco;
     disco.read_ppm_file("disco.ppm");
     const ImageTexture textura(&disco);
+
+    Image pared;
+    pared.read_ppm_file("pared.pbm");
+    const ImageTexture ladrillo(&pared);
     ///////////////////////////////////////////////////TEXTURA
 
 double sm=2;
@@ -289,7 +293,8 @@ double sm=2;
     Punto3D p1(0, 0.0, -1000.0);
     Vector3D q1(0, 1.0, 1.0);
     Plano plano1(p1, q1.hat());
-    plano1.establecerColor(0.02, 0.04, 0.2);
+   // plano1.establecerColor(0.02, 0.04, 0.2);
+    plano1.setTexture(ladrillo);
     //fin Pared
     //inicio piso
     Punto3D p2(0,-220,0);
