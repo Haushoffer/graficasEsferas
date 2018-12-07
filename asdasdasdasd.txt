@@ -1,12 +1,3 @@
-#include <math.h>
-#include "Vector3D.h"
-#include "Esfera.h"
-#include "ViewPlane.h"
-#include "Rayo.h"
-#include "LuzPuntual.h"
-#include "Utilitarios.h"
-#include "Plano.h"
-#include "Triangulo.h"
 
 
 double acotar(double n)
@@ -57,13 +48,37 @@ ColorRGB obtenerColorPixel(const Rayo& r, vector<ObjetoGeometrico*> objetos, Luz
 }
 
 
-int main()
-{
-    /////////////////////////////////////////////////////TEXTURA
-    Image disco;
-    disco.read_ppm_file("disco.ppm");
-    const ImageTexture textura(&disco);
-    ///////////////////////////////////////////////////TEXTURA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 double sm=2;
     double alt=200;
@@ -145,12 +160,12 @@ double sm=2;
     Punto3D centro13(100*sm, (33.3*sm)+alt, -900.0);
     double radio13 = 15.33*sm;
     Esfera esfera13(centro13, radio13);   
-    esfera13.setTexture(textura);
+    esfera13.establecerColor(0, 0, 0);
 
     Punto3D centro14(-100*sm, (33.3*sm)+alt, -900.0);
     double radio14 = 15.33*sm;
     Esfera esfera14(centro14, radio14);   
-    esfera14.setTexture(textura);
+    esfera14.establecerColor(0, 0, 0);
 
     Punto3D centro15(100*sm, (33.3*sm)+alt, -850.0);
     double radio15 = 4.33*sm;
@@ -165,12 +180,12 @@ double sm=2;
     Punto3D centro17(180*sm, (33.3*sm)+alt, -900.0);
     double radio17 = 15.33*sm;
     Esfera esfera17(centro17, radio17);   
-    esfera17.setTexture(textura);
+    esfera17.establecerColor(0, 0, 0);
 
     Punto3D centro18(-180*sm, (33.3*sm)+alt, -900.0);
     double radio18 = 15.33*sm;
     Esfera esfera18(centro18, radio18);   
-    esfera18.setTexture(textura);
+    esfera18.establecerColor(0, 0, 0);
 
     Punto3D centro19(180*sm, (33.3*sm)+alt, -850.0);
     double radio19 = 4.33*sm;
@@ -338,7 +353,11 @@ double sm=2;
     plano10.establecerColor(0.20, 0.29, 0.37);
 
     //Triangulo
-
+    Punto3D A(50,250,-50);
+    Punto3D B(0,300,45);
+    Punto3D C(-50, 250, -20);
+    Triangulo t(A, B, C);
+    t.establecerColor(0.113,0.647,0.529);
 
     //Calzon
     Punto3D A1(110,10,50);
@@ -570,7 +589,7 @@ double sm=2;
     //escena.push_back(&esfera37);
    // escena.push_back(&esfera38);
    //triangulo
-
+   escena.push_back(&t);
 
    //calzon
    escena.push_back(&t2);
@@ -651,5 +670,23 @@ double sm=2;
     }    
     savebmp("img.bmp", width, height, dpi, pixeles);
 
-    return 0;
-}
+
+
+    #include <vector>
+#include <iostream>
+#include <algorithm> 
+#include <math.h>
+using namespace std;
+#include "Vector3D.h"
+#include "Esfera.h"
+#include "ViewPlane.h"
+#include "Rayo.h"
+#include "LuzPuntual.h"
+#include "Utilitarios.h"
+#include "Plano.h"
+#include "Triangulo.h"
+
+
+
+
+g++ Esfera.cpp Vector3D.cpp Principal.cpp utilitarios.cpp Punto3D.cpp Rayo.cpp ViewPlane.cpp ObjetoGeometrico.cpp LuzPuntual.cpp Plano.cpp Triangulo.cpp Image.cpp ImageTexture.cpp
