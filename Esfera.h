@@ -19,6 +19,7 @@ class Esfera : public ObjetoGeometrico
 
     Punto3D c;
     bool esTexturizado;
+    ImageTexture textura;
     double r;
     ColorRGB color;
 };

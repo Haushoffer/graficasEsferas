@@ -9,6 +9,7 @@ Esfera::Esfera(Punto3D v_c, double v_r):c( v_c), r( v_r)
     color.g = 1.0;
     color.b = 0.0;
     esTexturizado=false;
+    //textura=NULL;
 }
 Esfera::~Esfera(){}
 bool Esfera::hayImpacto(const Rayo& rayo, double& tmin, Vector3D& n, Punto3D& q) const
@@ -56,16 +57,21 @@ void Esfera::establecerColor(double v_r, double v_g, double v_b)
 }
 ColorRGB Esfera::obtenerColor()
 {
-
     ColorRGB c;
+    if(esTexturizado){
+     c=textura.get_color();
+    }
+    else{
     c.r = color.r;
     c.g = color.g;
     c.b = color.b;
+    }
     return  c;
 }
 
 void Esfera::setTexture(ImageTexture img)
 {
+    textura=img;
     esTexturizado=true;
     ColorRGB x = img.get_color();
     color.r=x.r;
